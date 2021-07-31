@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="game.PlayerDialogController"
+            fx:id="dialogPane"
+            prefHeight="300"
+            stylesheets="@styles.css">
+    <content>
+        <BorderPane>
+            <left>
+                <ListView fx:id="playerListView"/>
+            </left>
+            <right>
+                <GridPane alignment="CENTER" hgap="10" vgap="10">
+                    <padding>
+                        <Insets left="20"/>
+                    </padding>
+                    <Label text="Name:"
+                           GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="playerNameLabel" text="N/A"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <TextField fx:id="playerNameTextField" maxWidth="100" visible="false"
+                               GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="Best ReacXion Time:"
+                           GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="timeLabel" text="N/A"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="Number of Attempts:"
+                           GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="attemptsLabel" text="N/A"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Separator GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                    <Button fx:id="editButton" text="Edit Name" minWidth="100"
+                            GridPane.rowIndex="4" GridPane.columnIndex="0"
+                            onMouseClicked="#handleEdit"/>
+                    <Button fx:id="doneButton" text="Done" minWidth="100" visible="false"
+                            GridPane.rowIndex="4" GridPane.columnIndex="0"
+                            onMouseClicked="#handleDone"/>
+                    <Button fx:id="deleteButton" text="Delete Player" minWidth="100"
+                            GridPane.rowIndex="4" GridPane.columnIndex="1"
+                            onMouseClicked="#handleDelete"/>
+                    <Button fx:id="cancelButton" text="Cancel" minWidth="100" visible="false"
+                            GridPane.rowIndex="4" GridPane.columnIndex="1"
+                            onMouseClicked="#handleCancel"/>
+                    <Button text="Add New Player" minWidth="222"
+                            GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                            onMouseClicked="#handleAdd"/>
+                </GridPane>
+            </right>
+        </BorderPane>
+    </content>
+</DialogPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="game.NameDialogController">
+    <headerText>
+        What's your name?
+    </headerText>
+    <content>
+        <FlowPane hgap="10">
+            <Label text="Type your name here: "/>
+            <TextField fx:id="nameTextField"/>
+        </FlowPane>
+    </content>
+</DialogPane>

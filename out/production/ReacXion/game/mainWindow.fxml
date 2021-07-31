@@ -1,0 +1,30 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:controller="game.MainController"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox>
+            <ToolBar HBox.hgrow="ALWAYS">
+                <Button fx:id="selectButton" text="Select Player" prefWidth="90"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button fx:id="exitButton" text="Exit" prefWidth="90"/>
+            </ToolBar>
+        </HBox>
+    </top>
+    <center>
+        <VBox fx:id="centerPane" alignment="CENTER">
+
+        </VBox>
+    </center>
+    <bottom>
+        <HBox style="-fx-background-color: gainsboro;">
+            <padding>
+                <Insets bottom="5" left="5" top="5" right="5"/>
+            </padding>
+            <Label fx:id="statusLabel"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label text="Created by: Samuel A. Kosasih"/>
+        </HBox>
+    </bottom>
+</BorderPane>
